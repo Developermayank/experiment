@@ -1,8 +1,4 @@
 User profile View
 http://gohooey.com/demo/sidebar/hoedemo.html
 
-<<<<<<< HEAD
-local
-=======
-good
->>>>>>> local/local
+cool really

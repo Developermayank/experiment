@@ -1,0 +1,77 @@
+<form>
+	<div class="row">
+		<div class="col-md-6 col-sm-6">
+			<div class="form-group has-feedback">
+				<label for="source">Departure Point</label>
+				<input id="source" class="form-control" type="text" placeholder="Your departure point (address, city, station...)"/>
+				<i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6">
+			<div class="form-group has-feedback">
+				<label for="destination">Arrival Point</label>
+				<input id="destination" class="form-control" type="text" placeholder="Your arrival point (address, city, station...)"/>
+				<i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="form-group form-group-sm form-inline">
+				<div class="col-md-5 col-sm-6 col-xs-4">
+					<label for="distance">Distance</label>
+				</div>
+				<div class="col-md-5 col-sm-6 col-xs-4">
+					<input type="text" class="form-control" name="distance" id="distance" style="width:100%;" disabled/>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<div class="form-group form-group-sm form-inline">
+				<div class="col-md-3 col-sm-3 col-xs-4">
+					<label for="fare">Fare</label>
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-4">
+					<input type="text" class="form-control" name="fare" id="fare" style="width:100%;" />
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-4">
+				<button type="button" class="btn btn-success btn-sm btn-block" name="edit" id="edit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="pickup_date">Leaving On</label>
+				<div class="row">
+					<div class="col-sm-8 col-xs-7">
+						<input type="date" class="form-control" id="pickup_date" />
+					</div>
+					<div class="col-sm-4 col-xs-5">
+						<input type="time" class="form-control" id="pickup_time">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="dropoff_date">Return (OPTIONAL)</label>
+				<div class="row">
+					<div class="col-sm-8 col-xs-7">
+						<input type="date" class="form-control" id="dropoff_date" />
+					</div>
+					<div class="col-sm-4 col-xs-5">
+						<input type="time" class="form-control" id="dropoff_time">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-xs-6">		
+			<button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+		</div>
+	</div>
+</form>

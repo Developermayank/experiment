@@ -1,0 +1,44 @@
+<form>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group has-feedback">
+				<label for="source">Search by Location</label>
+				<input id="source" class="form-control" type="text" placeholder="City, Address or locality"/>
+				<i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group has-feedback">
+				<label for="name">Search by Name</label>
+				<input id="name" class="form-control" type="text" placeholder="Same as Pick-Up"/>
+				<i class="form-control-feedback glyphicon glyphicon-user"></i>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label for="date">Date/Time</label>
+				<div class="row">
+					<div class="col-sm-6 col-xs-7">
+						<input type="date" class="form-control" id="date" />
+					</div>
+					<div class="col-sm-4 col-xs-5">
+						<input type="time" class="form-control" id="time">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="form-group">
+				<label for="days">Number of Days</label>
+				<input type="number" class="form-control" id="days" name="days"/>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4 col-xs-6">		
+			<button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+		</div>
+	</div>
+</form>

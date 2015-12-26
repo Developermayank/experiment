@@ -1,0 +1,53 @@
+a:hover{cursor: pointer;}
+#preload{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+#header{
+	background: url('../images/098.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:550px;
+}
+#header a{font-weight: bold;}
+
+.cb{color:white; font-weight: bold;}
+
+.bg-active{background-color: #A3CA48;}
+
+.c-navbar{height: 35px; margin-bottom: 0; position: top;}
+
+.wbm{color: white;font-weight: bold;margin-top: 7px;}
+.wbm a:hover{text-decoration: none;}
+
+.dropdown:hover .dropdown-menu{
+	display: block;
+	margin-top: 0;
+}
+
+.btn-codrop {
+	border: none;
+	padding: 0.6em 1.2em;
+	/*background: #337ab7; /*Green - #388a5a;*/
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bolder;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;
+}
+
+/*.btn-codrop:hover {
+	background: #2c774b;
+}*/
+
+.carousel-indicators{
+	bottom: 0;
+	background-color: cornflowerblue;
+}
+
+/*Drop Down Home menu*/

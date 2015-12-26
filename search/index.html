@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yotwister</title>
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <!-- <link href="../assets/css/extra.css" rel="stylesheet"> -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../experiment/animatecss/animate.min.css">
+  <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/buttons-min.css"> -->
+  <link rel="stylesheet" href="js-css/component.css">
+  <link rel="stylesheet" href="js-css/inline.css">
+</head>
+<body>
+  <div id="st-container" class="st-container">
+    <nav class="st-menu st-effect-2" id="menu-2">
+      <h2 style="letter-spacing:3px;">YOTWISTER</h2>
+      <ul>
+        <li><a href="#">Home<span class="glyphicon glyphicon-home glph"></span></a></li>
+        <li><a href="#">WE ARE HIRING!</a></li>
+        <li><a href="#">aBOUT US</a></li>
+        <li><a href="#">BLOG</a></li>
+      </ul>
+      <ul style="font-size:11px;">
+        <li><a href="#">Give us your feedback</a></li>
+        <li><a href="#">Advertise</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Policy</a></li>
+      </ul>
+      <ul style="font-size:12px;">
+        <li class="li-text">Need any help? Write to us at</li>
+        <li><a href="mailto:support@yotwister.com" style="text-transform:lowercase;"><span class="glyphicon glyphicon-envelope"></span> support@yotwister.com</a></li>
+        <li class="li-text" style="margin-top:20px;">Follow us:</li>
+        <li>
+          <a href="#" class="pull-left"><span class="glyphicon glyphicon-envelope"></span></a>
+          <a href="#" class="pull-left"><span class="glyphicon glyphicon-thumbs-up"></span></a>
+          <a href="#" class="pull-left"><span class="glyphicon glyphicon-heart-empty"></span></a>
+          <a href="#" class="pull-left"><span class="glyphicon glyphicon-equalizer"></span></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- content push wrapper -->
+    <div class="st-pusher">    
+      <div class="st-content"><!-- this is the wrapper for the content -->
+        <div class="container-fluid" id="header">
+          <!-- <div ng-include="' top-header.html'"></div>         -->
+          <div class="row">
+            <nav class="navbar navbar-inverse navbar-static-top" style="border-radius:0; min-height:36px; margin-bottom:0px;">
+              <div class="container" id="top-nav">
+                <ul class="nav navbar-nav navbar-left pull-left">
+                  <li><a rel="nofollow" class="navbar-brand">YOTWISTER</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pull-right">
+                  <li style="cursor:pointer;"><a rel="nofollow" id="main" data-effect="st-effect-2" style="float:right;">Menu<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="top:3px; left:8px;"></span></a></li>
+                </ul>               
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                  <li><a href="#"><s>How it works</s></a></li>
+                  <li><a href="#"><s>Blog</s></a></li>
+                  <li><a href="#loginModal" rel="nofollow" data-toggle="modal">Login</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>          
+          <div class="row">
+            <div class="container">
+              <div class="row">
+                <h1 class="h1-res">Green Living With <span class="animated bounceInLeft">CAR POOLING</span></h1>
+              </div> <!-- /Row -->
+              <div class="row">
+                <div id="box-menu">
+                </div>
+              </div> <!-- /Row -->
+            </div> <!-- /Container -->
+          </div> <!-- /Row -->
+        </div>
+      </div><!-- /st-content -->
+    </div><!-- /st-pusher -->
+  </div>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+   <div ng-include="'login-dialog.html'"></div>
+ </div>
+
+ <script src="js-css/classie.js"></script>
+ <script src="js-css/sidebarEffects.js"></script>
+ <script src="../assets/js/angular.min.js"></script>
+</body>
+</html>

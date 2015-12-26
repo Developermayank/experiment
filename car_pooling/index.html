@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Yotwister</title>
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/extra.css">
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/angular.min.js"></script>
+
+  <!-- Google Map Api -->
+  <!-- <link href="assets/google_map/main.css" rel="stylesheet"> -->
+  <!-- // <script src="assets/google_map/main.js"></script> -->
+  <style type="text/css">
+    #map{height:400px;}
+  </style>  
+</head>
+<body>
+  <!-- <div id="preload">
+    <img src="assets/images/loader.gif">
+  </div> -->
+
+  <div class="container-fluid" id="header">
+    <!-- Row 1 Top Navigation sm md -->
+    <div ng-include="'templates/navbar/top-navbar-sm-md.html'"></div>
+    <!-- Row 1 Top navigation sm md end -->
+    <!-- Row 2 -->
+    <div class="row" style="margin-top:100px; height:450px;">
+      <div class="container">
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <div class="row text-center"><h1>THIS IS GOOD</h1></div>
+          <div id="form-center">
+            <ul class="nav nav-tabs tab_align" role="tablist" style="height:70px;">
+              <li role="presentation"><a href="#car-pooling" aria-controls="car-pooling" role="tab" data-toggle="tab"><span class="cd">Search</span></a></li>
+              <li role="presentation"><a href="#offer-ride" aria-controls="offer-ride" role="tab" data-toggle="tab"><span class="cd">Offer Ride</span></a></li>
+              <li role="presentation"><a href="#car-pickup" aria-controls="car-pickup" role="tab" data-toggle="tab"><span class="cd">Car Pickup</span></a></li>
+              <li role="presentation"><a href="#need-driver" aria-controls="need-driver" role="tab" data-toggle="tab"><span class="cd">Need Driver</span></a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="car-pooling">
+                <!-- <div ng-include="'templates/forms/car_pooling.html'"></div> -->
+                <form id="form-1">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Going From</label>
+                        <input id="source-1" class="form-control" type="text" placeholder="From: e.g. Delhi">
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Going To</label>
+                        <input id="destination-1" class="form-control" type="text" placeholder="To: e.g. Jaipur"/> 
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-6">
+                      <div class="form-group">
+                        <label for="date">Date of Departing</label>
+                        <input type="date" class="form-control" id="date" name="date"/> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-6">
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="offer-ride">
+                <!-- <div ng-include="'templates/forms/offer_ride.html'"></div> -->
+                <form id="form-2">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Departure Point</label>
+                        <input id="source-2" class="form-control" type="text" placeholder="Your departure point (address, city, station...)"/>
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Arrival Point</label>
+                        <input id="destination-2" class="form-control" type="text" placeholder="Your arrival point (address, city, station...)"/>
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="form-group form-group-sm form-inline">
+                        <div class="col-md-5 col-sm-6 col-xs-4">
+                          <label for="distance">Distance</label>
+                        </div>
+                        <div class="col-md-5 col-sm-6 col-xs-4">
+                          <input type="text" class="form-control" name="distance" id="distance" style="width:100%;" disabled/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                      <div class="form-group form-group-sm form-inline">
+                        <div class="col-md-3 col-sm-3 col-xs-4">
+                          <label for="fare">Fare</label>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-4">
+                          <input type="text" class="form-control" name="fare" id="fare" style="width:100%;" />
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                          <button type="button" class="btn btn-success btn-sm btn-block" name="edit" id="edit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="pickup_date">Leaving On</label>
+                        <div class="row">
+                          <div class="col-sm-8 col-xs-7">
+                            <input type="date" class="form-control" id="pickup_date" />
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <input type="time" class="form-control" id="pickup_time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="dropoff_date">Return (OPTIONAL)</label>
+                        <div class="row">
+                          <div class="col-sm-8 col-xs-7">
+                            <input type="date" class="form-control" id="dropoff_date" />
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <input type="time" class="form-control" id="dropoff_time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-6">   
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="car-pickup">
+                <!-- <div ng-include="'templates/forms/car_pickup.html'"></div> -->
+                <form id="form-3">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Picking Up</label>
+                        <input id="source-3" class="form-control" type="text" placeholder="City, Address or near by"/>
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Dropping off</label>
+                        <input id="destination-3" class="form-control" type="text" placeholder="Same as Pick-Up" disabled/>
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="pickup_date">Pick-up Date/Time</label>
+                        <div class="row">
+                          <div class="col-sm-8 col-xs-7">
+                            <input type="date" class="form-control" id="pickup_date" />
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <input type="time" class="form-control" id="pickup_time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="dropoff_date">Drop off Date/Time</label>
+                        <div class="row">
+                          <div class="col-sm-8 col-xs-7">
+                            <input type="date" class="form-control" id="dropoff_date" />
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <input type="time" class="form-control" id="dropoff_time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-6">   
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="need-driver">
+                <!-- <div ng-include="'templates/forms/need_driver.html'"></div> -->
+                <form id="form-4">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Search by Location</label>
+                        <input id="source-4" class="form-control" type="text" placeholder="City, Address or locality"/>
+                        <i class="form-control-feedback glyphicon glyphicon-map-marker"></i>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group has-feedback">
+                        <label>Search by Name</label>
+                        <input id="name" class="form-control" type="text" placeholder="Same as Pick-Up"/>
+                        <i class="form-control-feedback glyphicon glyphicon-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="date">Date/Time</label>
+                        <div class="row">
+                          <div class="col-sm-6 col-xs-7">
+                            <input type="date" class="form-control" id="date" />
+                          </div>
+                          <div class="col-sm-4 col-xs-5">
+                            <input type="time" class="form-control" id="time">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label for="days">Number of Days</label>
+                        <input type="number" class="form-control" id="days" name="days"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 col-xs-6">   
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 hidden-xs hidden-sm">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div> 
+    <!-- Row 2 -->   
+  </div><!-- /.container-fluid -->
+
+
+  <script type="text/javascript">  
+    // $(document).on("scroll", function() {
+    //   if($(document).scrollTop() > 50) {
+    //     $(".navbar-default").css("background-color","orange");
+    //   } else {
+    //     $(".navbar-default").css("background-color","#f8f8f8");
+    //   }
+    // });
+
+    $(document).on('click','.searchbychar', function(event) {
+      event.preventDefault();
+      var target = "#" + this.getAttribute('data-target');
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 2000);
+    });
+
+  // $(window).load(function() {
+  //   $('#preload').fadeOut();
+  //   $('#header').fadeIn('slow'); // add display css to header div as none
+  // });
+</script>
+<script type="text/javascript" src="assets/google_map/main.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQujq-dNcgQNhp2eDTqxdOg3SJH5v6my8&signed_in=false&libraries=places&callback=initMap"></script>
+
+</body>
+</html>

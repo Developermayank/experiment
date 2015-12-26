@@ -1,4 +1,2 @@
 User profile View
 http://gohooey.com/demo/sidebar/hoedemo.html
-
-Local editing

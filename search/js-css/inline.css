@@ -5,7 +5,7 @@
 }
 #header{
   background: url('../../assets/images/car-pool-2.jpg');
-  background-repeat:no-repeat; 
+  background-repeat:no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,17 +13,14 @@
   overflow:hidden;
   opacity:80%;
   background-position: top center;
-  height:56vw;
-  min-height:480px;
+  height: 480px;
 }
 .h1-res{
-  font-size:4vw;
   font-weight:bolder;
   text-align:center;
 }
 #box-menu{
   opacity:0.5;
-  height:250px;
   margin: 20px 10px;
 }
 .glph{
@@ -43,4 +40,8 @@
 .modal-title-re{
   font-size:20px;
   font-weight:bold;
+}
+
+.col-sm-4.col-xs-4 {
+    padding: 0;
 }

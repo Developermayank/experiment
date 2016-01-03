@@ -5,10 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yotwister</title>
-  <link href="../assets/css/bootstrap.css" rel="stylesheet">
-  <!-- <link href="../assets/css/extra.css" rel="stylesheet"> -->
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/js/bootstrap.min.js"></script>
+    <!-- Loading Bootstrap -->
+    <link href="../dist/css/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../dist/css/flat-ui.min.css" rel="stylesheet">
+cd
+    <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+    <script src="../dist/js/vendor/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="../experiment/animatecss/animate.min.css">
   <!-- <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/buttons-min.css"> -->
   <link rel="stylesheet" href="js-css/component.css">
@@ -48,13 +54,13 @@
         <div class="container-fluid" id="header">
           <!-- <div ng-include="' top-header.html'"></div>         -->
           <div class="row">
-            <nav class="navbar navbar-inverse navbar-static-top" style="border-radius:0; min-height:36px; margin-bottom:0px;">
-              <div class="container" id="top-nav">
-                <ul class="nav navbar-nav navbar-left pull-left">
-                  <li><a rel="nofollow" class="navbar-brand">YOTWISTER</a></li>
-                </ul>
+            <nav class="navbar navbar-inverse navbar-static-top">
+              <div class="container">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">YOTWISTER</a>
+                </div>
                 <ul class="nav navbar-nav navbar-right pull-right">
-                  <li style="cursor:pointer;"><a rel="nofollow" id="main" data-effect="st-effect-2" style="float:right;">Menu<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" style="top:3px; left:8px;"></span></a></li>
+                  <li style="cursor:pointer;"><a rel="nofollow" id="main" data-effect="st-effect-2" style="float:right;">Menu <span class="fui-list"></span></a></li>
                 </ul>               
                 <ul class="nav navbar-nav navbar-right hidden-xs">
                   <li><a href="#"><s>How it works</s></a></li>

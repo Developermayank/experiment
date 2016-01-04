@@ -7,9 +7,12 @@
 
 @media only screen and (min-width: 992px) {
     .h1-res{
-    	font-size: 4em;
+    	font-size: 3em;
+    	margin-bottom: 0.67em;
+    	margin-top:0;
     }
 }
+
 
 html,
 body,
